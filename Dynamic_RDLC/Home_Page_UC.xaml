@@ -1,0 +1,56 @@
+﻿<UserControl x:Class="Dynamic_RDLC.Home_Page_UC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Dynamic_RDLC"
+             mc:Ignorable="d" 
+             >
+    <Grid>
+        <StackPanel>
+            <Label Content="Import New Product" FontSize="40" Foreground="Coral" FontWeight="UltraBlack" HorizontalAlignment="Center"/>
+            <StackPanel Orientation="Horizontal">
+                <StackPanel HorizontalAlignment="Left">
+                    <StackPanel Margin="0,5,0,0">
+                        <Label Content="Date And Time" FontSize="18" FontWeight="SemiBold" Foreground="#880E4F"/>
+                        <DatePicker x:Name="date_tbx" Height="40" BorderThickness="1" VerticalContentAlignment="Center" Background="White" FontSize="18" Foreground="Coral"/>
+                    </StackPanel>
+                    <StackPanel Margin="0,5,0,0">
+                        <Label Content="Product Category" FontSize="18" FontWeight="SemiBold" Foreground="#880E4F"/>
+                        <TextBox x:Name="category_tbx" Style="{StaticResource input_tbx}"/>
+                    </StackPanel>
+                    <StackPanel Margin="0,5,0,0">
+                        <Label Content="Product Name" FontSize="18" FontWeight="SemiBold" Foreground="#880E4F"/>
+                        <TextBox x:Name="name_tbx" Style="{StaticResource input_tbx}"/>
+                    </StackPanel>
+                    <StackPanel Margin="0,5,0,0">
+                        <Label Content="Product Model" FontSize="18" FontWeight="SemiBold" Foreground="#880E4F"/>
+                        <TextBox x:Name="model_tbx" Style="{StaticResource input_tbx}"/>
+                    </StackPanel>
+                    <StackPanel Margin="0,5,0,0">
+                        <Label Content="Product Quantity" FontSize="18" FontWeight="SemiBold" Foreground="#880E4F"/>
+                        <TextBox x:Name="quantity_tbx" Style="{StaticResource input_tbx}" TextChanged="price_tbx_TextChanged"/>
+                    </StackPanel>
+                    <StackPanel Margin="0,5,0,0">
+                        <Label Content="Product Price" FontSize="18" FontWeight="SemiBold" Foreground="#880E4F"/>
+                        <TextBox x:Name="price_tbx" Style="{StaticResource input_tbx}" TextChanged="price_tbx_TextChanged"/>
+                    </StackPanel>
+                    <StackPanel Margin="0,5,0,0">
+                        <Label Content="Total Price" FontSize="18" FontWeight="SemiBold" Foreground="#880E4F"/>
+                        <TextBox x:Name="totalprice_tbx" Style="{StaticResource input_tbx}"/>
+                    </StackPanel>
+                    <StackPanel Margin="0,15,0,0" Orientation="Horizontal">
+                        <Button x:Name="clear_btn" MouseDoubleClick="clear_btn_MouseDoubleClick" Content="Clear" Background="#E53935" Style="{StaticResource mybtn}"/>
+                        <Button x:Name="add_btn" MouseDoubleClick="add_btn_MouseDoubleClick" Content="ADD" Background="#880E4F" Style="{StaticResource mybtn}" Margin="10,0,0,0"/>
+                    </StackPanel>
+
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Right" Width="auto" Margin="50,10">
+                    <Label Content="Product List" FontSize="34" Foreground="BlueViolet" HorizontalAlignment="Center"/>
+                    <DataGrid x:Name="my_datagrid" Width="auto" Height="400" MaxHeight="500"/>
+                    <Button x:Name="get_report_btn" Click="get_report_btn_Click" Content="Get Report" Width="200" HorizontalAlignment="Right" Background="DarkSlateBlue" Style="{StaticResource mybtn}" Margin="0,10,0,0"/>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

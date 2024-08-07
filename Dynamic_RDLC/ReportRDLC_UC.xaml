@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="Dynamic_RDLC.ReportRDLC_UC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Dynamic_RDLC"
+             xmlns:mrv="clr-namespace:Microsoft.Reporting.WinForms;assembly=Microsoft.ReportViewer.WinForms"
+             mc:Ignorable="d" 
+             >
+    <Grid>
+        <WindowsFormsHost  Height="600" Margin="0,40,0,0">
+            <mrv:ReportViewer x:Name="reportView" />
+        </WindowsFormsHost>
+
+        <Button x:Name="back_btn" MouseDoubleClick="back_btn_MouseDoubleClick" Content="back" FontSize="18" Foreground="Red" FontWeight="SemiBold" Cursor="Hand" Background="Black" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+    </Grid>
+</UserControl>
